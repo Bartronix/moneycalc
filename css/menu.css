@@ -1,0 +1,92 @@
+/*menu*/
+#menu {
+    float:left;
+}
+
+#menu ul {
+    float: left;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+#menu li {
+    float: left;
+    display: inline;
+}
+
+#menu li:hover a {
+    float: left;
+    display: inline;
+	color: #2a2929;
+}
+
+#menu a {
+	display:block;
+	text-decoration: none;
+    color: white;
+    font-size:1.5em;
+    padding: 0.2em 0.6em;	
+	width: 90%;
+}
+
+#menu a:hover {
+    color: #c0c0c0;
+}
+
+#menu.out {
+	order: 1px solid #333;
+	-webkit-box-shadow: 5px 0 7px -2px #888;
+	box-shadow: 7px 0 5px -2px #888;
+}
+
+#menu.out li:hover {
+	background-color: #ffffff;
+}
+
+#menu.out li {
+    padding: 5px 0px 5px;
+    border-bottom: 1px solid #080808;
+}
+
+#menu.out a {
+    padding-left: 5px; 
+}
+
+#lnk-mobile-menu {
+	z-index: 999;
+	position: fixed;
+	top: 2px;
+	left: 10px;	
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background: transparent url(../images/menu.png) left top no-repeat;
+	cursor: pointer;
+	display: none;
+}
+
+#menu a.selected {
+	color: #2a2929;
+}
+
+@media screen and (max-width: 767px) {
+    #menu {
+		background-color: #2a2929;
+		width: 250px;
+		position: fixed;
+		left: 0;
+		top: 0;
+		height: 100%;
+		margin-left: -250px;		
+	}
+
+	#lnk-mobile-menu{
+		display: block;		
+	}
+
+	#menu li {
+		width: 100%;
+	}
+}

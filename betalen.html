@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Cache-control" content="max-age=10">
+	<title>Moneycalc</title>
+	<link rel="canonical" href="https://moneycalc.bartleemans.be">
+	<link rel="manifest" href="manifest.json">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/icons/icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/icons/icon-32x32.png">
+	<link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<meta name="apple-mobile-web-app-title" content="Moneycalc">
+	<meta name="msapplication-TileImage" content="images/icons/mstile-150x150.png">
+	<meta name="msapplication-TileColor" content="#2F3BA2">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-640x1136.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-750x1294.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1242x2148.png" media="(device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1125x2436.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1536x2048.png" media="(min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-1668x2224.png" media="(min-device-width: 834px) and (max-device-width: 834px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<link rel="apple-touch-startup-image" href="images/splash/launch-2048x2732.png" media="(min-device-width: 1024px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait)">
+	<!--<link rel="stylesheet" type="text/css" href="css/main.min.css?v=1">-->
+	<link rel="stylesheet" type="text/css" href="css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
+</head>
+<body>
+<div id="wrapper">
+    <a id="lnk-mobile-menu"></a>
+	<header>
+		<div id="header-container">
+			<div id="logo">
+				<a href="/"><span id="logo-title">Geldbeheer - betalen</span></a>
+			</div>        
+            <div id="menu">
+                <nav>
+					<ul class="menulist">
+						<li>
+							<a target="_self" href="index.html">Ik heb</a>
+						</li>
+						<li>
+							<a target="_self" href="betalen.html">Betalen</a>
+						</li>
+						<li>
+							<a target="_self" href="rekenmachine.html">Rekenen</a>
+						</li>
+						<li>
+							<a target="_self" href="info.html">Info</a>
+						</li>
+					</ul>                
+				</nav>
+            </div>                 
+		</div>	
+	</header>
+	<div id="content" class="app">
+		<div>
+			Te betalen: <input type="text" id="payment-amount" />&euro;
+        </div>        
+		<button id="btn-calculate-payment" class="ok" onclick="app.calculatePayment();">
+			1: Bereken
+		</button>
+		<div id="output"></div>
+		<button class="ok" onclick="app.confirmPayment();">
+			2: Betaald!
+		</button>
+		<br>
+        <button class="info" onclick="window.location = 'index.html';">
+			3: Wisselgeld toevoegen
+		</button>
+	</div>	
+	<div id="push"></div>
+</div>
+<footer id="footer">
+	<div id="footer-container">
+		&copy;Bart Leemans
+	</div>
+</footer>
+<script type="text/javascript" src="scripts/errorhandler.js"></script>
+<script type="text/javascript" src="scripts/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="scripts/menu.js"></script>
+<script type="text/javascript" src="scripts/init.js"></script>
+<script type="text/javascript" src="scripts/main.js"></script>
+</body>
+</html>
